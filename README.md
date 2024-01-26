@@ -1,1 +1,1 @@
-# https-yu-yahamada.github.io-sample
+# https://yu-yahamada.github.io/sample
