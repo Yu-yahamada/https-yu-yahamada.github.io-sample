@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Progrative | Basic | Level 1-4</title>
+
+    <!-- google font 読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind 読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontSize: {
+              xs: ".625rem", // 10px
+              sm: ".75rem", // 12px
+              base: "0.875rem", // 14px
+              lg: "1rem", // 16px
+              xl: "1.25rem", // 20px
+              "2xl": "1.5rem", // 24px
+              "3xl": "2.375rem", // 38px
+              "4xl": "2.75rem", // 44px
+              "5xl": "3rem", // 48px
+              "6xl": "3.5rem", // 56px
+            },
+            colors: {
+              black: "#3f3f3f",
+              black2: "#4d4d4d",
+              gray1: "#7e7e7e",
+              gray2: "#e1e1e1",
+              gray3: "#f8f8f8",
+              gray4: "#d9d9d9",
+              gray5: "#DBDBDB",
+              accent: "#2FA597",
+            },
+            screens: {
+              "2xl": "1440px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .btn-links {
+          @apply relative after:absolute after:content-[''] after:w-[4px] after:h-[4px] after:rounded-full after:bg-white after:top-1/2 after:-left-4 after:-translate-y-1/2 after:duration-300 after:opacity-0 hover:after:opacity-100;
+        }
+      }
+    </style>
+
+    <!-- JS 読み込み -->
+    <script defer src="./assets/js/index.js"></script>
+
+    <!-- CSS 読み込み -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <img src="./assets/images/header.svg" alt="">
+      </div>
+    </header>
+
+    <main class="">
+      <!--　VISUAL　-->
+      <div id="visual" class="visual">
+        <div class="visual__container">
+          <!--　背景画像　-->
+          <img src="./assets/images/main-background.png" alt="">
+          <div class="visual__contents">
+            <!-- 左の要素　-->
+            <div class="visual__texts">
+              <div>
+                <img class="" src="./assets/images/main_catch_white.svg" alt="">
+              </div>
+
+              <div class="visual__from">
+                <div class="visal__fromBlock">
+                  <div class="visual__fromLine"></div>
+                  <div class="visual__fromText">Progrative</div>
+                </div>
+              </div>
+
+              <button class="visual__button">無料で始める</button>
+            </div>
+
+            <!-- 右の要素　-->
+            <div class="visual__image">
+              <img src="./assets/images/mockup.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="visual__scroll"></div>
+      </div>
+      <!-- PLANS -->
+      <div id="plans" class="plans">
+        <div class="plans__headding">プラン</div>
+        <div class="plans__container">
+          <!--  -->
+          <div class="plans__plan">
+            <div class="plans__planImage"><img src="./assets/images/plan01.png" alt=""></div>
+            <div class="plans__title">Business</div>
+            <div class="plans__contents">
+              <div class="plans__content">
+                <div class="plans__element">- 3人まで管理画面利用可能</div>
+                <div class="plans__element">- 1サイトまで解析可能</div>
+                <div class="plans__element">- リーチ回数測定</div>
+                <div class="plans__element">- エンゲージメント率測定</div>
+                <div class="plans__element">- インプレッション数測定</div>
+                <div class="plans__element">- サイト推移計測</div>
+              </div>
+            </div>
+            <button class="plans__button">問い合わせる</button>
+          </div>
+          <!--  -->
+          <div class="plans__plan">
+            <div class="plans__Image"><img src="./assets/images/plan03.png" alt="plan1"></div>
+            <div class="plans__title">Expert</div>
+            <div class="plans__contents">
+              <div class="plans__content">
+                <div class="plans__element">- 100人まで管理画面利用可能</div>
+                <div class="plans__element">- 無制限にサイト解析可能</div>
+              </div>
+              <div class="plans__content">
+                <div class="plans__element">- Businessプランの内容に加え</div>
+                <div class="plans__element">- Twitter連携　＆　分析</div>
+                <div class="plans__element">- Instagram連携　＆　分析</div>
+                <div class="plans__element">- Youtube連携　＆　分析</div>
+                <div class="plans__element">*Tiktokは今後対応予定</div>
+              </div>
+            </div>
+            <button class="plans__button">問い合わせる</button>
+          </div>
+        </div>
+      </div>
+      <!-- NEWS -->
+      <div id="news" class="news">
+        <div class="news__container">
+          <div class="news__hedding">お知らせ</div>
+          <div class="news__lists">
+            <!--  -->
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__data">2025/04/01</div>
+                <div class="news__category">お知らせ</div>
+              </div>
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
+                >サイト解析オンライン座談会を開催しました。<span class="news__linkIcon"><img src="./assets/images/arrow01.svg" alt=""></span
+                  ></a>
+              </div>
+            </div>
+            <!--  -->
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/03/28</div>
+                <div class="news__category">ブログ</div>
+              </div>  
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
+                >サイト解析において85％の人が勘違いしている戦略・戦術<span class="news__linkIcon"><img src="./assets/images/arrow01.svg" alt=""></span
+                  ></a>
+              </div>
+            </div>
+            <!--  -->
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/03/16</div>
+                <div class="news__category">ブログ</div>
+              </div>
+              <div class="contentBlock">
+                <a class="news__contentLink" href=""
+                >【Google元社員が語る】各SNSでのエンゲージメント傾向の違い<span class="news__linkIcon"><img src="./assets/images/arrow01.svg" alt=""></span
+                  ></a>
+              </div>
+            </div>
+            <!--  -->
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/03/16</div>
+                <div class="news__category">お知らせ</div>
+              </div>
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
+                >導入企業さまが500社を突破<span class="news__linkIcon"><img src="./assets/images/arrow01.svg" alt=""></span
+                  ></a>
+              </div>
+            </div>
+            <!--  -->
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/02/10</div>
+                <div class="news__category">お知らせ</div>
+              </div>
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
+                >弊社サイト解析士を15名体制に変更<span class="news__linkIcon"><img src="./assets/images/arrow01.svg" alt=""></span
+                  ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LINKS -->
+      <div id="links" class="links">
+        <div class="links__container">
+          <!--  -->
+          <div class="links__block">
+            <div class="">
+              <a class="js-accordionParent on links__parent hover-dot" href="">
+                <span>Progrativeとは</span>
+                <span class="link-mark"></span>
+              </a>
+            </div>
+            <div class="js-accordingChildren links__children">
+              <div>
+                <a href="" class="links__children hover-dot">導入事例</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">導入方法</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">活用事例</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">Google Analyticsとの違い</a>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="links__block">
+            <div class="">
+              <a class="js-accordionParent links__parent hover-dot" href="">
+                <span>機能</span>
+                <span class="link-mark"></span>
+              </a>
+            </div>
+            <div class="js-accordingChildren links__children">
+              <div>
+                <a href="" class="links__children hover-dot">リーチ回数測定</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">エンゲージメント率測定</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">インプレッション率測定</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">サイト推移計測</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">タイマー機能</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">アラート機能</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">エクスポート機能</a>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="links__block">
+            <div class="">
+              <a class="js-accordionParent links__parent hover-dot" href="">
+                <span>サポート</span>
+                <span class="link-mark"></span>
+              </a>
+            </div>
+            <div class="js-accordingChildren links__children">
+              <div>
+                <a href="" class="links__children hover-dot">よくある質問</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">ブログ</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">ドキュメント</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">動画講座</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">資料請求</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">お問い合わせ</a>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="links__block">
+            <div class="">
+              <a class="js-accordionParent links__parent hover-dot" href="">
+                <span>パートナーについて</span>
+                <span class="link-mark"></span>
+              </a>
+            </div>
+            <div class="js-accordingChildren links__children">
+              <div>
+                <a href="" class="links__children hover-dot">パートナーとは</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">パートナー紹介</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">よくある質問</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">資料請求</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">お問い合わせ</a>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="links__block">
+            <div class="">
+              <a class="js-accordionParent links__parent hover-dot" href="">
+                <span>SNS</span>
+                <span class="link-mark"></span>
+              </a>
+            </div>
+            <div class="js-accordingChildren links__children">
+              <div>
+                <a href="" class="links__children hover-dot">Twitter</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">YouTube</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">TikTok</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">Instagram</a>
+              </div>
+              <div>
+                <a href="" class="links__children hover-dot">Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="links__hr" />
+        <div class="limks__about">
+          <div class="links__aboutContainer">
+            <a href="">株式会社〇〇</a>
+            <a href="">利用規約</a>
+            <a href="">特定商取引法に基づく表記</a>
+            <a href="">プライバシーポリシー</a>
+          </div>
+          <div class="links__copyright">
+            <a href="" class="">©️〇〇　All Right Reserved.</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>©️ Progrative by&nbsp;<span class="font-roboto">TERRART 2022</span>.</div>
+    </footer>
+    <div id="sidebar"></div>
+  </body>
+</html>
